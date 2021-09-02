@@ -11,13 +11,13 @@ import java.util.List;
 @Repository
 public interface UserMapper {
 
-    List<User> queryUserList();
+    List<User> query();
 
-    User queryUserById(int id);
+    User queryBy(int id);
 
-    int addUser(User user);
+    int insert(User user);
 
-    int updateUser(User user);
+    int update(User user);
 
-    int deleteUser(int id);
+    int delete(int id);
 }

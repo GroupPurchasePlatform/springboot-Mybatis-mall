@@ -17,34 +17,34 @@ public class UserController {
     //查询所有用户
     @GetMapping("/queryUserList")
     public List<User> queryUserList(){
-        List<User> userList=userMapper.queryUserList();
+        List<User> userList=userMapper.query();
         return userList;
     }
 
     //根据id查询用户
     @GetMapping("/queryUserById")
     public User queryUserById(){
-        User user=userMapper.queryUserById(5);
+        User user=userMapper.queryBy(5);
         return user;
     }
     //添加用户
     @GetMapping("/addUser")
     public String addUser(){
-        userMapper.addUser(new User(5,"zhangsan","12345"));
+        userMapper.insert(new User(5,"zhangsan","12345"));
         return "ok";
     }
 
     //修改用户
     @GetMapping("/updateUser")
     public String updateUser(){
-        userMapper.updateUser(new User(5,"zhangsan","54321"));
+        userMapper.update(new User(5,"zhangsan","54321"));
         return "ok";
     }
 
     //根据id删除用户
     @GetMapping("/deleteUser")
     public String deleteUser(){
-        userMapper.deleteUser(5);
+        userMapper.delete(5);
         return "ok";
     }
 
