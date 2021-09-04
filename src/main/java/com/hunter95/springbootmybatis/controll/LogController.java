@@ -48,7 +48,7 @@ public class LogController {
                 "2021/9/4"));
         return "ok";
     }
-    
+
     //根据日志id删除日志
     @GetMapping("/deleteLogByLogId")
     public String deleteLogByLogId(){
