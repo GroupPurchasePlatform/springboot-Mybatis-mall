@@ -26,14 +26,14 @@ public class StaffController {
     //根据企业id查询企业员工
     @GetMapping("/queryEnterpriseIdList")
     public List<Staff> queryEnterpriseIdList(){
-        List<Staff> staffList=staffMapper.queryByEnterpriseId();
+        List<Staff> staffList=staffMapper.queryByEnterpriseId(1);
         return staffList;
     }
 
     //根据id查询企业员工
     @GetMapping("/queryStaffById")
     public Staff queryStaffById(){
-        Staff staff=staffMapper.queryByStaffId(1);
+        Staff staff=staffMapper.queryByStaffId("1001");
         return staff;
     }
     //添加企业员工

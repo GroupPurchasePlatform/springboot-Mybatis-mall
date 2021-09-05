@@ -14,9 +14,9 @@ public interface StaffMapper {
     List<Staff> query();
 
 
-    List<Staff> queryByEnterpriseId();
+    List<Staff> queryByEnterpriseId(int id);
 
-    Staff queryByStaffId(int id);
+    Staff queryByStaffId(String id);
 
     int insert(Staff staff);
 
