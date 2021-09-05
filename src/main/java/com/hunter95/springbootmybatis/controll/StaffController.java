@@ -23,10 +23,17 @@ public class StaffController {
         return staffList;
     }
 
+    //根据企业id查询企业员工
+    @GetMapping("/queryEnterpriseIdList")
+    public List<Staff> queryEnterpriseIdList(){
+        List<Staff> staffList=staffMapper.queryByEnterpriseId();
+        return staffList;
+    }
+
     //根据id查询企业员工
     @GetMapping("/queryStaffById")
     public Staff queryStaffById(){
-        Staff staff=staffMapper.queryBy(1);
+        Staff staff=staffMapper.queryByStaffId(1);
         return staff;
     }
     //添加企业员工

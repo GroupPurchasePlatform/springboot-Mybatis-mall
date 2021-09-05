@@ -13,7 +13,10 @@ public interface StaffMapper {
 
     List<Staff> query();
 
-    Staff queryBy(int id);
+
+    List<Staff> queryByEnterpriseId();
+
+    Staff queryByStaffId(int id);
 
     int insert(Staff staff);
 

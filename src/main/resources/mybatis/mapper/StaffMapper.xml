@@ -8,7 +8,11 @@
         select * from staff
     </select>
 
-    <select id="queryBy" resultType="Staff">
+    <select id="queryByEnterpriseId" resultType="Staff">
+        select * from staff where enterprise_id=#{id}
+    </select>
+
+    <select id="queryByStaffId" resultType="Staff">
         select * from staff where staff_id=#{id}
     </select>
 
@@ -68,7 +72,7 @@
     </update>
 
     <delete id="delete" parameterType="String">
-        delete from enterprise where enterprise_id=#{id}
+        delete from staff where staff_id=#{id}
     </delete>
 
 </mapper>
