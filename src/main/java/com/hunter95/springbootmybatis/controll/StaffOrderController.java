@@ -97,12 +97,10 @@ public class StaffOrderController {
         return "ok";
     }
 
-
     //根据id删除订单
     @GetMapping("/deleteStaffOrder")
     public String deleteStaffOrder(){
         staffOrderMapper.delete(1);
         return "ok";
     }
-
 }
